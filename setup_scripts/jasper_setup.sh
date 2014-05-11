@@ -9,12 +9,13 @@ wget http://downloads.sourceforge.net/project/cmusphinx/sphinxbase/0.8/sphinxbas
 wget http://downloads.sourceforge.net/project/cmusphinx/pocketsphinx/0.8/pocketsphinx-0.8.tar.gz && \
 tar -zxvf sphinxbase-0.8.tar.gz && \
 tar -zxvf pocketsphinx-0.8.tar.gz && \
-cd ~/sphinxbase-0.8/
-# install sphinxbase
-./configure --enable-fixed
-make && sudo make install
+sudo apt-get install flex bison && \
+cd ~/sphinxbase-0.8/ && \
+# install sphinxbase && \
+./configure --enable-fixed && \
+make && sudo make install && \
 # install pocketsphinx
-cd ~/pocketsphinx-0.8/
-./configure
-make && sudo make install
+cd ~/pocketsphinx-0.8/ && \
+./configure && \
+make && sudo make install && \
 echo "All done!"
